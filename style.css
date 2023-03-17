@@ -1,0 +1,88 @@
+/* Reset all margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font family, color, and size for body text, and center the text */
+body {
+    font-family: 'Tilt Warp', cursive;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Set height and background colors for each section of the main element */
+main section {
+    height: 30vw;
+}
+
+main section:nth-of-type(1) {
+    background-color: #F4442E;
+}
+
+main section:nth-of-type(2) {
+    background-color: #FC9E4F;
+}
+
+main section:nth-of-type(3) {
+    background-color: #EDD382;
+}
+
+/* Set background color for footer */
+footer {
+    background-color: #020122;
+}
+
+/* LAB 6 - START HERE */ 
+
+    /* Step One - recreate the layout featured in the lab instructions using floats and clear 
+
+        1.) use floats to align the section elements side by side */
+        main section {
+            float: left;
+        }
+
+        /*2.) use the clear property to fix the footer position */
+        footer {
+            clear: both;
+        }
+
+        /* 3.) return to the section style rule and set section elements to 33.3% width */
+        main section {
+            width: 33.3%;
+        }
+
+    /* Step Two - move footer outside of the main element and recreate the layout, ensuring that main element has a height */
+        /* Move the footer outside of the main element in the HTML code */
+
+    /*Step Three - with the footer still outside of main, recreate the layout using Flexbox*/
+        /* Set the display property of the main element to flex */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            height: 90vh;
+        }
+
+        /* Set the flex properties for the section elements */
+        main section {
+            flex: 1 0 33.3%;
+        }
+
+        /* Set the flex properties for the footer element */
+        footer {
+            flex-basis: 100%;
+        }
+
+    
+    /* Bonus Challenge #1 Vertically align the text using flexbox - + 1 mark */
+        /* Set the align-items property of the main element to center */
+        main {
+            align-items: center;
+        }
+
+    /* Bonus Challenge #2 - vertically align the text without using flexbox - + 1 mark/ */
+        /* Set the line-height property of the body element to the height of the viewport */
+        body {
+            line-height: 100vh;
+        }
